@@ -8,10 +8,10 @@ router.get('/users', userControllers.getAllUser);
 router.get('/users/:userId', userControllers.getUserById)
 
 //find user by name and age
-router.get('/getUserByNameAndAge', userControllers.getUserByNameAndAge)
+router.get('/users/user-by-name-and-age', userControllers.getUserByNameAndAge)
 
 //create user
-router.post('/createUser', userControllers.createUser)
+router.post('/users', userControllers.createUser)
 
 //create many users
 router.post('/createManyUser', userControllers.createManyUser)

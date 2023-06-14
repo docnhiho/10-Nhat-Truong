@@ -1,4 +1,5 @@
 const user = [
+    
     { name: 'Nhat', age: 19 },
     { name: 'Minh', age: 15 }
 ]
