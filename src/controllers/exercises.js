@@ -81,8 +81,6 @@ const exe7 = (req, res) => {
 const exe17 = (req, res) => {
     const { str } = req.query;
     const a = str.split(' ').reverse().join(' ');
-    // const b = a.reverse();
-    // const c = b.join(' ');
     res.send(a)
 
     //cách 2
