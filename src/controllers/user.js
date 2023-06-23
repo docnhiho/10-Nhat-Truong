@@ -11,7 +11,7 @@ function getAllUser(req, res) {
     ]);
 };
 
-//http://localhost:3000/v1/getUser/10
+//http://localhost:3000/v1/users/10
 function getUserById(req, res) {
     const userId = req.params.userId;
     console.log('userID: ', userId);
@@ -44,6 +44,19 @@ const createManyUser = (req, res) => {
     res.send(newUser)
 
 }
+
+//Thêm mới 1 user 
+//Add vào 1 middware check các điều kiện sau
+//Kiếm tra req.body.username không vượt quá 20 kí tự
+//Kiếm tra req.bodu.password không vượt quá 8 kí tự
+function validate(req, res, next){
+    const { username, password } =req.body;
+    if(username.lenght>8 ){
+        next("Không nhập kí tự vượt quá 20")
+    }
+}
+
+
 
 module.exports = {
     getAllUser,
